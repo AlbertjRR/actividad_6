@@ -1,10 +1,9 @@
-//Ejercicio 9
-
+//numero 9
 
 #include <stdio.h>
 #include <string.h>
 
-int contarOcurrencias(char *cadena, char *subcadena) {
+int contar(char *cadena, char *subcadena) {
     int contador = 0;
     char *posicion = cadena;
 
@@ -17,18 +16,18 @@ int contarOcurrencias(char *cadena, char *subcadena) {
 }
 
 int main() {
-    char cadena[100];
-    char subcadena[50];
+    char cadena[50];
+    char subcadena[25];
 
-    printf("David por favor ingresa una cadena de texto: ");
-    fgets(cadena, 100, stdin);
+    printf("ingresar cadena: ");
+    fgets(cadena, 50, stdin);
 
-    printf("David ingresa la subcadena a buscar: ");
-    fgets(subcadena, 50, stdin);
+    printf("ingresar subcadena: ");
+    fgets(subcadena, 25, stdin);
 
-    int ocurrencias = contarOcurrencias(cadena, subcadena);
+    int contador = contar(cadena, subcadena);
 
-    printf("David la subcadena '%s' aparece %d veces en la cadena.\n", subcadena, ocurrencias);
+    printf("subcadena '%s' aparece %d veces en la cadena.\n", subcadena, contador);
 
     return 0;
 }
