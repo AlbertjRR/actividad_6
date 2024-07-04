@@ -1,16 +1,14 @@
-//Ejercicio 3
-
-
+//numero 3
 
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
 
 int main() {
-    char cadena[100];
+    char cadena[50];
 
-    printf("David por favor ingresa una cadena de texto: ");
-    fgets(cadena, 100, stdin);
+    printf("ingresar cadena: ");
+    fgets(cadena, 50, stdin);
 
     int longitud = strlen(cadena);
 
@@ -19,7 +17,7 @@ int main() {
         longitud--;
     }
 
-    printf("David la cadena sin espacios en blanco al final es: %s\n", cadena);
+    printf("la cadena al final es: %s\n", cadena);
 
     return 0;
 }
