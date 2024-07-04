@@ -1,31 +1,30 @@
-//Ejercicio 7
-
+//numero 7
 
 #include <stdio.h>
 #include <string.h>
 
-void insertarCadena(char *cadena, char *cadenaAInsertar, int posicion) {
-    memmove(&cadena[posicion + strlen(cadenaAInsertar)], &cadena[posicion], strlen(cadena) - posicion + 1);
-    memcpy(&cadena[posicion], cadenaAInsertar, strlen(cadenaAInsertar));
+void insertarCadena(char *cadena, char *cadenaAinsertar, int posicion) {
+    memmove(&cadena[posicion + strlen(cadenaAinsertar)], &cadena[posicion], strlen(cadena) - posicion + 1);
+    memcpy(&cadena[posicion], cadenaAinsertar, strlen(cadenaAinsertar));
 }
 
 int main() {
-    char cadena[100];
-    char cadenaAInsertar[50];
+    char cadena[50];
+    char cadenaAinsertar[25];
     int posicion;
 
-    printf("David por favor ingresa una cadena de texto: ");
-    fgets(cadena, 100, stdin);
+    printf("}ingresar cadena: ");
+    fgets(cadena, 50, stdin);
 
-    printf("David ingresa la cadena a insertar: ");
-    fgets(cadenaAInsertar, 50, stdin);
+    printf("ingresar cadena a insertar: ");
+    fgets(cadenaAInsertar, 25, stdin);
 
-    printf("David ingresa la posición para insertar: ");
+    printf("ingresar posiciÃ³n para insertar: ");
     scanf("%d", &posicion);
 
-    insertarCadena(cadena, cadenaAInsertar, posicion);
+    insertarCadena(cadena, cadenaAinsertar, posicion);
 
-    printf("David La cadena resultante es: %s\n", cadena);
+    printf("el resultadoe es: %s\n", cadena);
 
     return 0;
 }
