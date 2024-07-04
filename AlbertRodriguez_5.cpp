@@ -1,29 +1,28 @@
-//Ejercicio 5
-
+//numero 5
 
 #include <stdio.h>
 #include <string.h>
 
-void eliminarCaracteres(char *cadena, int posicion, int cantidad) {
-    memmove(&cadena[posicion], &cadena[posicion + cantidad], strlen(cadena) - cantidad - posicion + 1);
+void eliminarCaracteres(char *cadena, int opcion, int cant) {
+    memmove(&cadena[opcion], &cadena[opcion + cant], strlen(cadena) - cant - opcion + 1);
 }
 
 int main() {
-    char cadena[100];
-    int posicion, cantidad;
+    char cadena[50];
+    int opcion, cant;
 
-    printf("David por favor ingresa una cadena de texto: ");
-    fgets(cadena, 100, stdin);
+    printf("ingresar cadena: ");
+    fgets(cadena, 50, stdin);
 
-    printf("David por favor ingresa la posicion inicial para eliminar: ");
-    scanf("%d", &posicion);
+    printf("Dingresar la opcion a eliminar: ");
+    scanf("%d", &opcion);
 
-    printf("David por favor ingresa la cantidad de caracteres a eliminar: ");
-    scanf("%d", &cantidad);
+    printf("ingresa los caracteres a eliminar: ");
+    scanf("%d", &cant);
 
-    eliminarCaracteres(cadena, posicion, cantidad);
+    eliminarCaracteres(cadena, opcion, cant);
 
-    printf("David la cadena resultante es: %s\n", cadena);
+    printf("el resultado es: %s\n", cadena);
 
     return 0;
 }
