@@ -1,35 +1,34 @@
-//Ejercicio 8
-
+//numero 8
 
 #include <stdio.h>
 #include <string.h>
 
-void sustituirCadena(char *cadena, char *cadenaABuscar, char *cadenaANueva) {
-    char *posicion = strstr(cadena, cadenaABuscar);
+void sustitucion(char *cadena, char *Buscarcadena, char *cadenaNueva) {
+    char *posicion = strstr(cadena, Buscarcadena);
 
     if (posicion != NULL) {
-        memmove(posicion + strlen(cadenaANueva), posicion + strlen(cadenaABuscar), strlen(posicion + strlen(cadenaABuscar)) + 1);
-        memcpy(posicion, cadenaANueva, strlen(cadenaANueva));
+        memmove(posicion + strlen(cadenaNueva), posicion + strlen(Buscarcadena), strlen(posicion + strlen(Buscarcadena)) + 1);
+        memcpy(posicion, cadenaNueva, strlen(cadenaNueva));
     }
 }
 
 int main() {
-    char cadena[100];
-    char cadenaABuscar[50];
-    char cadenaANueva[50];
+    char cadena[50];
+    char Buscarcadena[25];
+    char cadenaNueva[25];
 
-    printf("David por favor ingresa una cadena de texto: ");
-    fgets(cadena, 100, stdin);
+    printf("ingresar cadena: ");
+    fgets(cadena, 50, stdin);
 
-    printf("David ingresa la subcadena a buscar: ");
-    fgets(cadenaABuscar, 50, stdin);
+    printf("ingresa subcadena: ");
+    fgets(Buscarcadena, 25, stdin);
 
-    printf("David ingresa la nueva subcadena: ");
-    fgets(cadenaANueva, 50, stdin);
+    printf("ingresar nueva subcadena: ");
+    fgets(cadenaNueva, 25, stdin);
 
-    sustituirCadena(cadena, cadenaABuscar, cadenaANueva);
+    sustituir(cadena, Buscarcadena, cadenaNueva);
 
-    printf("David La cadena resultante es: %s\n", cadena);
+    printf("cadena resultante es: %s\n", cadena);
 
     return 0;
 }
