@@ -1,28 +1,26 @@
-//Ejercicio 2
-
-
+//numero2
 
 #include <stdio.h>
 #include <string.h>
 
 int main() {
-    char cadena[100];
+    char cadena[50];
     int n;
 
-    printf("Hola David por favor ingresa una cadena de texto: ");
-    fgets(cadena, 100, stdin);
+    printf("ingresar cadena: ");
+    fgets(cadena, 50, stdin);
 
-    printf("David ingresa la cantidad de caracteres a extraer al final: ");
+    printf("ingresar la cantidad que desea extraer al final: ");
     scanf("%d", &n);
 
     int longitud = strlen(cadena);
 
     if (n > longitud) {
-        printf("Error: Lo siento David la cantidad de caracteres a extraer supera la longitud de la cadena.\n");
+        printf("Error: los caracteres son superiores la longitud de la cadena.\n");
     } else {
-        // Calculamos el índice donde comenzar a extraer los últimos n caracteres
+        // Calculamos el Ã­ndice donde comenzar a extraer los Ãºltimos n caracteres
         int inicio = longitud - n;
-        printf("David los ultimos %d caracteres son: %s\n", n, &cadena[inicio]);
+        printf("los ultimos %d caracteres son: %s\n", n, &cadena[inicio]);
     }
 
     return 0;
