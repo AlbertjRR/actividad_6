@@ -1,5 +1,4 @@
-//Ejercicio 6
-
+//numero 6
 
 #include <stdio.h>
 #include <string.h>
@@ -13,18 +12,18 @@ void eliminarPrimeraAparicion(char *cadena, char *subcadena) {
 }
 
 int main() {
-    char cadena[100];
-    char subcadena[50];
+    char cadena[50];
+    char subcadena[25];
 
-    printf("David por favor ingresa una cadena de texto: ");
-    fgets(cadena, 100, stdin);
+    printf("ingresar cadena: ");
+    fgets(cadena, 50, stdin);
 
-    printf("David ingresa la subcadena a eliminar: ");
-    fgets(subcadena, 50, stdin);
+    printf("ingresar subcadena a eliminar: ");
+    fgets(subcadena, 25, stdin);
 
     eliminarPrimeraAparicion(cadena, subcadena);
 
-    printf("David la cadena resultante es: %s\n", cadena);
+    printf("el resultado es: %s\n", cadena);
 
     return 0;
 }
